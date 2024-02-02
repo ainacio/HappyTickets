@@ -1,0 +1,9 @@
+<!-- city-input.component.html -->
+
+<div>
+  <label for="cityInput">Enter City:</label>
+  <input id="cityInput" [(ngModel)]="selectedCity" placeholder="City">
+  <label for="dateInput">Enter Date:</label> <!-- Add this line -->
+  <input id="dateInput" [(ngModel)]="selectedDate" type="date"> <!-- Add this line -->
+  <button (click)="fetchEvents()">Search</button>
+</div>

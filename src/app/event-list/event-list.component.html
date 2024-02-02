@@ -1,0 +1,16 @@
+<!-- event-list.component.html -->
+
+<div *ngIf="events.length > 0">
+  <h2>Events</h2>
+  <ul>
+    <li *ngFor="let event of events">
+      <h3>{{ event.name }}</h3>
+      <p>Date: {{ event.dates.start.localDate }}</p>
+      <p>Time: {{ event.dates.start.localTime }}</p>
+      <p>Location: {{ event._embedded?.venues[0]?.name || 'N/A' }}</p>
+    </li>
+  </ul>
+</div>
+<div *ngIf="events.length === 0">
+  <p>No events found</p>
+</div>
